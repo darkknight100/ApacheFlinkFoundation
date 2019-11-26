@@ -10,14 +10,6 @@ object StreamingApp extends App{
 
   val streamExecutionEnvironment: StreamExecutionEnvironment  = StreamExecutionEnvironment.createLocalEnvironmentWithWebUI(FlinkApplicationConfig.getConfig())
 
-  val dataStream = streamExecutionEnvironment.fromCollection(Seq(1,2,3))
-
-  logger.info("welcome")
-
-  dataStream.map(x => println(x))
-
-  println("Vaibhav")
-
   streamExecutionEnvironment.execute("Generic Streaming Application")
 
 }
